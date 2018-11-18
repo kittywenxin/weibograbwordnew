@@ -14,7 +14,9 @@ import matplotlib.pyplot as plt
 from wordcloud import WordCloud,ImageColorGenerator
 import PIL.Image as Image
 
-search=input('input keyword:')
+
+search=raw_input('input keyword:')
+
 url='https://m.weibo.cn/api/container/getIndex?type=all&queryVal={}&featurecode=20000320&luicode=10000011&lfid=106003type%3D1&title={}&containerid=100103type%3D1%26q%3D{}'.format(search,search,search)
 
 def cookie():
@@ -139,9 +141,3 @@ def word_cloud(results,search):
 
 word_cloud(pl,results)
 word_cloud(pl,search)
-'''
-作者：小小蒲公英 
-来源：CSDN 
-原文：https://blog.csdn.net/weixin_39777626/article/details/80212216 
-版权声明：本文为博主原创文章，转载请附上博文链接！
-'''
